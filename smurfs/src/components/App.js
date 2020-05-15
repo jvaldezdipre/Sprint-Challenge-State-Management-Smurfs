@@ -45,15 +45,15 @@ const App = () => {
       .catch(err => console.log(err));
   };
 
-  const deleteSmurf = id => {
-    axios
-      .delete(`http://localhost:3333/smurfs/${id}`)
-      .then(res => {
-        console.log('Deleted item', res);
-        // getSmurf();
-      })
-      .catch(err => console.log('Deleted item Error', err));
-  };
+  // const deleteSmurf = id => {
+  //   axios
+  //     .delete(`http://localhost:3333/smurfs/${id}`)
+  //     .then(res => {
+  //       console.log('Deleted item', res);
+  //       // getSmurf();
+  //     })
+  //     .catch(err => console.log('Deleted item Error', err));
+  // };
 
   return (
     <div className='App'>
@@ -62,7 +62,7 @@ const App = () => {
       <div>Start inside of your `src/index.js` file!</div>
       <div>Have fun!</div>
       <SmurfContext.Provider
-        value={{ smurfs, smurfValues, deleteSmurf, onInputChange, onSubmit }}
+        value={{ smurfs, smurfValues, onInputChange, onSubmit }}
       >
         <SmurfForm />
         <SmurfList />
